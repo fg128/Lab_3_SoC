@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="CORTEXM0DS_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1775131606">
+  <File Type="RDS-DCP" Name="CORTEXM0DS.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/CORTEXM0DS_synth_1/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="CORTEXM0DS_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/CORTEXM0DS_synth_1/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="CORTEXM0DS_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="CORTEXM0DS.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/CORTEXM0DS_synth_1/CORTEXM0DS_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="CORTEXM0DS.vds"/>
+  <File Type="RDS-UTIL" Name="CORTEXM0DS_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CORTEXM0DS_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CORTEXM0DS_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/CORTEXM0DS">
+    <File Path="$PSRCDIR/CORTEXM0DS/imports/Source/cortexm0ds_logic.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Source/cortexm0ds_logic.v"/>
+        <Attr Name="ImportTime" Val="1413789996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/CORTEXM0DS/imports/Source/CORTEXM0DS.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Source/CORTEXM0DS.v"/>
+        <Attr Name="ImportTime" Val="1413790000"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc"/>
+        <Attr Name="ImportTime" Val="1445774456"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="out_of_context"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="CORTEXM0DS"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/CORTEXM0DS/imports/Source/CORTEXM0DS.v"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/CORTEXM0DS">
+    <File Path="$PSRCDIR/CORTEXM0DS/imports/Source/cortexm0ds_logic.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Source/cortexm0ds_logic.v"/>
+        <Attr Name="ImportTime" Val="1413789996"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/CORTEXM0DS/imports/Source/CORTEXM0DS.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Source/CORTEXM0DS.v"/>
+        <Attr Name="ImportTime" Val="1413790000"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/DES_M0_SoC.srcs/CORTEXM0DS/new/CORTEXM0DS_ooc.xdc"/>
+        <Attr Name="ImportTime" Val="1445774456"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="out_of_context"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="CORTEXM0DS"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/CORTEXM0DS/imports/Source/CORTEXM0DS.v"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_AHBuart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_AHBuart" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="34" />
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HCLK" type="logic">
+      <obj_property name="ElementShortName">HCLK</obj_property>
+      <obj_property name="ObjectShortName">HCLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HRESETn" type="logic">
+      <obj_property name="ElementShortName">HRESETn</obj_property>
+      <obj_property name="ObjectShortName">HRESETn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HSELx" type="logic">
+      <obj_property name="ElementShortName">HSELx</obj_property>
+      <obj_property name="ObjectShortName">HSELx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HADDR" type="array">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HTRANS" type="array">
+      <obj_property name="ElementShortName">HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HSIZE" type="array">
+      <obj_property name="ElementShortName">HSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HWRITE" type="logic">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HWDATA" type="array">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HRDATA" type="array">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HREADY" type="logic">
+      <obj_property name="ElementShortName">HREADY</obj_property>
+      <obj_property name="ObjectShortName">HREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HREADYOUT" type="logic">
+      <obj_property name="ElementShortName">HREADYOUT</obj_property>
+      <obj_property name="ObjectShortName">HREADYOUT</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/serialTx" type="logic">
+      <obj_property name="ElementShortName">serialTx</obj_property>
+      <obj_property name="ObjectShortName">serialTx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/serialRx" type="logic">
+      <obj_property name="ElementShortName">serialRx</obj_property>
+      <obj_property name="ObjectShortName">serialRx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/uart_IRQ" type="logic">
+      <obj_property name="ElementShortName">uart_IRQ</obj_property>
+      <obj_property name="ObjectShortName">uart_IRQ</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider98">
+      <obj_property name="label">Testbench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/nextWdata" type="array">
+      <obj_property name="ElementShortName">nextWdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextWdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/expectRdata" type="array">
+      <obj_property name="ElementShortName">expectRdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expectRdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/rExpectRead" type="array">
+      <obj_property name="ElementShortName">rExpectRead[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rExpectRead[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/rReadType" type="array">
+      <obj_property name="ElementShortName">rReadType[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rReadType[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/checkRead" type="logic">
+      <obj_property name="ElementShortName">checkRead</obj_property>
+      <obj_property name="ObjectShortName">checkRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/readCapture" type="array">
+      <obj_property name="ElementShortName">readCapture[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readCapture[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/transState" type="logic">
+      <obj_property name="ElementShortName">transState</obj_property>
+      <obj_property name="ObjectShortName">transState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/errCount" type="array">
+      <obj_property name="ElementShortName">errCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider99">
+      <obj_property name="label">Constants</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/BYTE" type="array">
+      <obj_property name="ElementShortName">BYTE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/HALF" type="array">
+      <obj_property name="ElementShortName">HALF[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/WORD" type="array">
+      <obj_property name="ElementShortName">WORD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/NONSEQ" type="array">
+      <obj_property name="ElementShortName">NONSEQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NONSEQ[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/RXDATA" type="array">
+      <obj_property name="ElementShortName">RXDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RXDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/TXDATA" type="array">
+      <obj_property name="ElementShortName">TXDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TXDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/STATUS" type="array">
+      <obj_property name="ElementShortName">STATUS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STATUS[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBuart/CONTRL" type="array">
+      <obj_property name="ElementShortName">CONTRL[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CONTRL[31:0]</obj_property>
+   </wvobject>
+</wave_config>

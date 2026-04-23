@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Apr 02 13:07:25 2026
+# Process ID: 2632
+# Log file: C:/Users/lab/Documents/EmbeddedSystems/FG_DB_PB_SoC/DES_SoC/Hardware/DemoSystem.runs/blk_mem_4Kword_synth_1/blk_mem_4Kword.vds
+# Journal file: C:/Users/lab/Documents/EmbeddedSystems/FG_DB_PB_SoC/DES_SoC/Hardware/DemoSystem.runs/blk_mem_4Kword_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_4Kword.tcl -notrace

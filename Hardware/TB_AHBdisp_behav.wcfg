@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_AHBdisp_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_AHBdisp" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="40" />
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HCLK" type="logic">
+      <obj_property name="ElementShortName">HCLK</obj_property>
+      <obj_property name="ObjectShortName">HCLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HRESETn" type="logic">
+      <obj_property name="ElementShortName">HRESETn</obj_property>
+      <obj_property name="ObjectShortName">HRESETn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HSELx" type="logic">
+      <obj_property name="ElementShortName">HSELx</obj_property>
+      <obj_property name="ObjectShortName">HSELx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HADDR" type="array">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HTRANS" type="array">
+      <obj_property name="ElementShortName">HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HSIZE" type="array">
+      <obj_property name="ElementShortName">HSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HWRITE" type="logic">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HWDATA" type="array">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HRDATA" type="array">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HREADY" type="logic">
+      <obj_property name="ElementShortName">HREADY</obj_property>
+      <obj_property name="ObjectShortName">HREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HREADYOUT" type="logic">
+      <obj_property name="ElementShortName">HREADYOUT</obj_property>
+      <obj_property name="ObjectShortName">HREADYOUT</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider65">
+      <obj_property name="label">Display Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/digit" type="array">
+      <obj_property name="ElementShortName">digit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/segment" type="array">
+      <obj_property name="ElementShortName">segment[7:0]</obj_property>
+      <obj_property name="ObjectShortName">segment[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/displayReg" type="array">
+      <obj_property name="ElementShortName">displayReg[0:9][7:0]</obj_property>
+      <obj_property name="ObjectShortName">displayReg[0:9][7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/digitSel" type="array">
+      <obj_property name="ElementShortName">digitSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">digitSel[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/mode" type="logic">
+      <obj_property name="ElementShortName">mode</obj_property>
+      <obj_property name="ObjectShortName">mode</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/raw" type="array">
+      <obj_property name="ElementShortName">raw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">raw[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/hexPattern" type="array">
+      <obj_property name="ElementShortName">hexPattern[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hexPattern[6:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/dut/pattern" type="array">
+      <obj_property name="ElementShortName">pattern[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider31">
+      <obj_property name="label">Testbench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/nextWdata" type="array">
+      <obj_property name="ElementShortName">nextWdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextWdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/expectRdata" type="array">
+      <obj_property name="ElementShortName">expectRdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expectRdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/rExpectRead" type="array">
+      <obj_property name="ElementShortName">rExpectRead[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rExpectRead[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/rReadType" type="array">
+      <obj_property name="ElementShortName">rReadType[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rReadType[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/checkRead" type="logic">
+      <obj_property name="ElementShortName">checkRead</obj_property>
+      <obj_property name="ObjectShortName">checkRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/readCapture" type="array">
+      <obj_property name="ElementShortName">readCapture[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readCapture[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/transState" type="logic">
+      <obj_property name="ElementShortName">transState</obj_property>
+      <obj_property name="ObjectShortName">transState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/errCount" type="array">
+      <obj_property name="ElementShortName">errCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider32">
+      <obj_property name="label">Constants</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/BYTE" type="array">
+      <obj_property name="ElementShortName">BYTE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/HALF" type="array">
+      <obj_property name="ElementShortName">HALF[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/WORD" type="array">
+      <obj_property name="ElementShortName">WORD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/NONSEQ" type="array">
+      <obj_property name="ElementShortName">NONSEQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NONSEQ[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/MODREG" type="array">
+      <obj_property name="ElementShortName">MODREG[3:0]</obj_property>
+      <obj_property name="ObjectShortName">MODREG[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/ENBREG" type="array">
+      <obj_property name="ElementShortName">ENBREG[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ENBREG[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBdisp/BASEADDR" type="array">
+      <obj_property name="ElementShortName">BASEADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BASEADDR[31:0]</obj_property>
+   </wvobject>
+</wave_config>

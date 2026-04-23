@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_AHBgpio_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_AHBgpio" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="44" />
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HCLK" type="logic">
+      <obj_property name="ElementShortName">HCLK</obj_property>
+      <obj_property name="ObjectShortName">HCLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HRESETn" type="logic">
+      <obj_property name="ElementShortName">HRESETn</obj_property>
+      <obj_property name="ObjectShortName">HRESETn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HSELx" type="logic">
+      <obj_property name="ElementShortName">HSELx</obj_property>
+      <obj_property name="ObjectShortName">HSELx</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HADDR" type="array">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HTRANS" type="array">
+      <obj_property name="ElementShortName">HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HSIZE" type="array">
+      <obj_property name="ElementShortName">HSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HWRITE" type="logic">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HWDATA" type="array">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HRDATA" type="array">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HREADY" type="logic">
+      <obj_property name="ElementShortName">HREADY</obj_property>
+      <obj_property name="ObjectShortName">HREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HREADYOUT" type="logic">
+      <obj_property name="ElementShortName">HREADYOUT</obj_property>
+      <obj_property name="ObjectShortName">HREADYOUT</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider233">
+      <obj_property name="label">GPIO ports</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/gpio_in0" type="array">
+      <obj_property name="ElementShortName">gpio_in0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_in0[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/gpio_in1" type="array">
+      <obj_property name="ElementShortName">gpio_in1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_in1[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/gpio_out0" type="array">
+      <obj_property name="ElementShortName">gpio_out0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_out0[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/gpio_out1" type="array">
+      <obj_property name="ElementShortName">gpio_out1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_out1[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider232">
+      <obj_property name="label">Testbench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/transState" type="logic">
+      <obj_property name="ElementShortName">transState</obj_property>
+      <obj_property name="ObjectShortName">transState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/nextWdata" type="array">
+      <obj_property name="ElementShortName">nextWdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextWdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/expectRdata" type="array">
+      <obj_property name="ElementShortName">expectRdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expectRdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/rExpectRead" type="array">
+      <obj_property name="ElementShortName">rExpectRead[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rExpectRead[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/rReadType" type="array">
+      <obj_property name="ElementShortName">rReadType[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rReadType[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/readCapture" type="array">
+      <obj_property name="ElementShortName">readCapture[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readCapture[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/checkRead" type="logic">
+      <obj_property name="ElementShortName">checkRead</obj_property>
+      <obj_property name="ObjectShortName">checkRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/errCount" type="array">
+      <obj_property name="ElementShortName">errCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider169">
+      <obj_property name="label">Constants</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#808080</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/BYTE" type="array">
+      <obj_property name="ElementShortName">BYTE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/HALF" type="array">
+      <obj_property name="ElementShortName">HALF[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HALF[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/WORD" type="array">
+      <obj_property name="ElementShortName">WORD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WORD[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/NONSEQ" type="array">
+      <obj_property name="ElementShortName">NONSEQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NONSEQ[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT0" type="array">
+      <obj_property name="ElementShortName">OUT0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT0[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT1" type="array">
+      <obj_property name="ElementShortName">OUT1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT1[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN0" type="array">
+      <obj_property name="ElementShortName">IN0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN0[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN1" type="array">
+      <obj_property name="ElementShortName">IN1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN1[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT0L" type="array">
+      <obj_property name="ElementShortName">OUT0L[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT0L[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT0H" type="array">
+      <obj_property name="ElementShortName">OUT0H[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT0H[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT1L" type="array">
+      <obj_property name="ElementShortName">OUT1L[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT1L[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/OUT1H" type="array">
+      <obj_property name="ElementShortName">OUT1H[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT1H[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN0L" type="array">
+      <obj_property name="ElementShortName">IN0L[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN0L[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN0H" type="array">
+      <obj_property name="ElementShortName">IN0H[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN0H[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN1L" type="array">
+      <obj_property name="ElementShortName">IN1L[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN1L[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/TB_AHBgpio/IN1H" type="array">
+      <obj_property name="ElementShortName">IN1H[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IN1H[31:0]</obj_property>
+   </wvobject>
+</wave_config>

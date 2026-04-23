@@ -1,0 +1,11 @@
+Dependencies for Project 'DES_M0_SoC', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x69CE73EE)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-o .\temp_files\main.o --omf_browse .\temp_files\main.crf --depend .\temp_files\main.d)
+I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (DES_M0_SoC.h)(0x69C54349)
+F (.\main-SysTick.c)(0x69C54349)()
+F (.\main-scanf.c)(0x69C54349)()
+F (.\main-CMSIS.c)(0x69C54349)()
+F (.\cm0dsasm.s)(0x69C54349)(--cpu Cortex-M0 --li --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include--list .\temp_files\cm0dsasm.lst --xref -o .\temp_files\cm0dsasm.o --depend .\temp_files\cm0dsasm.d)
+F (.\retarget.c)(0x69C54349)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-o .\temp_files\retarget.o --omf_browse .\temp_files\retarget.crf --depend .\temp_files\retarget.d)
+I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (DES_M0_SoC.h)(0x69C54349)

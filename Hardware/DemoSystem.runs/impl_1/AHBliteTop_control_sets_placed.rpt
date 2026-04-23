@@ -1,0 +1,222 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Apr 02 14:36:13 2026
+| Host         : Eleclab85 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file AHBliteTop_control_sets_placed.rpt
+| Design       : AHBliteTop
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |   169 |
+| Minimum Number of register sites lost to control set restrictions |   560 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |             262 |          175 |
+| No           | Yes                   | No                     |             106 |           34 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             584 |          449 |
+| Yes          | Yes                   | No                     |             478 |          198 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+|    Clock Signal    |               Enable Signal               |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++--------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+|  clockGen/clk_out1 | cpu/u_logic/Vfyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Teyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | DUMMY/E[0]                                | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | DUMMY/E[0]                                | cpu/u_logic/Ytm2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Qztvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Siqvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Qztvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Rfpvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Yafwx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Yafwx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Ydyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Z0uvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Kdyvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/W2uvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Rfpvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/W2uvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Rdyvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/L0uvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              1 |
+|  clockGen/clk_out1 | cpu/u_logic/Okn2z4_i_1_n_0                | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              1 |
+|  clockGen/clk_out1 |                                           |                                   |                1 |              2 |
+|  clockGen/clk_out1 | DUMMY/E[0]                                | cpu/u_logic/Cps2z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Afyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/C5ovx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                1 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Yafwx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                1 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/W2uvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Vytvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Vytvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Siqvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Rfpvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Ddyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Meyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Meyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Kdyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/I4zvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                1 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/Ydyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                2 |              2 |
+|  clockGen/clk_out1 | cpu/u_logic/I4zvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Meyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/L0uvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                2 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Z0uvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                2 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Feyvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                2 |              3 |
+|  clockGen/clk_out1 | cpu/u_logic/Feyvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                3 |              3 |
+|  clockGen/clk_out1 | UART/uart2/E[0]                           | resetGen/SR[0]                    |                2 |              4 |
+|  clockGen/clk_out1 | GPIO/control_reg[3][0]                    | resetGen/SR[0]                    |                1 |              4 |
+|  clockGen/clk_out1 | cpu/u_logic/L0uvx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                3 |              4 |
+|  clockGen/clk_out1 | cpu/u_logic/Z0uvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                2 |              4 |
+|  clockGen/clk_out1 | ROM/loader/storeNibble                    | ROM/loader/nibbleCount[3]_i_1_n_0 |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[7][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[6][3]_i_1_n_0        | resetGen/resetHW                  |                2 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[5][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[4][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[3][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[2][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/w_ptr_reg[3]_i_1_n_0        | resetGen/SR[0]                    |                1 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[0][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 | cpu/u_logic/Vytvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              4 |
+|  clockGen/clk_out1 | GPIO/E[0]                                 | resetGen/SR[0]                    |                2 |              4 |
+|  clockGen/clk_out1 | mux/rConflict_reg[0]                      | RAM/rConflict[3]_i_1_n_0          |                2 |              4 |
+|  clockGen/clk_out1 | cpu/u_logic/K6yvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |                3 |              4 |
+|  clockGen/clk_out1 | cpu/u_logic/I4zvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                4 |              4 |
+|  clockGen/clk_out1 | ROM/loader/nibbleReg[1][3]_i_1_n_0        | resetGen/resetHW                  |                1 |              4 |
+|  clockGen/clk_out1 |                                           | clockGen/AR[0]                    |                2 |              5 |
+|  clockGen/clk_out1 | cpu/u_logic/Teyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                5 |              5 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                5 |              5 |
+|  clockGen/clk_out1 | cpu/u_logic/C5ovx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                3 |              5 |
+|  clockGen/clk_out1 | cpu/u_logic/Siqvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                4 |              5 |
+|  clockGen/clk_out1 | UART/uart2/bit8x                          | resetGen/SR[0]                    |                2 |              5 |
+|  clockGen/clk_out1 | cpu/u_logic/Okn2z4_i_1_n_0                | cpu/u_logic/Cps2z4_i_3_n_0        |                4 |              6 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                5 |              6 |
+|  clockGen/clk_out1 | cpu/u_logic/Qztvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                1 |              6 |
+|  clockGen/clk_out1 | cpu/u_logic/Okn2z4_i_1_n_0                | cpu/u_logic/Ek03z4_i_3_n_0        |                5 |              6 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                5 |              6 |
+|  clockGen/clk_out1 | cpu/u_logic/Feyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                7 |              7 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                7 |              7 |
+|  clockGen/clk_out1 | cpu/u_logic/Vfyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                6 |              7 |
+|  clockGen/clk_out1 | cpu/u_logic/C5ovx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                4 |              7 |
+|  clockGen/clk_out1 | UART/uart2/bit8x                          | UART/uart2/rxcount[6]_i_1__0_n_0  |                3 |              7 |
+|  clockGen/clk_out1 | cpu/u_logic/Okn2z4_i_1_n_0                | cpu/u_logic/P9h3z4_i_2_n_0        |                7 |              7 |
+|  clockGen/clk_out1 | ROM/uart1/bit8x                           | ROM/uart1/rxcount[6]_i_1_n_0      |                2 |              7 |
+|  clockGen/clk_out1 | GPIO/out0H0                               | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[4][7]_i_1_n_0     | resetGen/SR[0]                    |                6 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[3][7]_i_1_n_0     | resetGen/SR[0]                    |                7 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[13][7]_i_1_n_0    | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[0][7]_i_1_n_0     | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uart2/rxdout0                        | resetGen/SR[0]                    |                1 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[12][7]_i_1_n_0    | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[4][7]_i_1__0_n_0  | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[8][7]_i_1_n_0     | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[2][7]_i_1_n_0     | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[13][7]_i_1__0_n_0 | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[14][7]_i_1__0_n_0 | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[3][7]_i_1__0_n_0  | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | cpu/u_logic/I4zvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                7 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[9][7]_i_1__0_n_0  | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[2][7]_i_1__0_n_0  | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | GPIO/out0L0                               | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | GPIO/out1H0                               | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | GPIO/out1L0                               | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[5][7]_i_1__0_n_0  | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[7][7]_i_1__0_n_0  | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | ROM/uart1/rxdout0                         | resetGen/resetHW                  |                2 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[10][7]_i_1__0_n_0 | resetGen/SR[0]                    |                2 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[12][7]_i_1__0_n_0 | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[8][7]_i_1__0_n_0  | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[6][7]_i_1__0_n_0  | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[11][7]_i_1__0_n_0 | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[0][7]_i_1__0_n_0  | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[15][7]_i_1__0_n_0 | resetGen/SR[0]                    |                3 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_RX/array_reg[1][7]_i_1__0_n_0  | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[1][7]_i_1_n_0     | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[6][7]_i_1_n_0     | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | cpu/u_logic/Feyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                7 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[7][7]_i_1_n_0     | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | cpu/u_logic/Vfyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                6 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[11][7]_i_1_n_0    | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[9][7]_i_1_n_0     | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[10][7]_i_1_n_0    | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[15][7]_i_1_n_0    | resetGen/SR[0]                    |                5 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[14][7]_i_1_n_0    | resetGen/SR[0]                    |                6 |              8 |
+|  clockGen/clk_out1 | UART/uFIFO_TX/array_reg[5][7]_i_1_n_0     | resetGen/SR[0]                    |                4 |              8 |
+|  clockGen/clk_out1 | cpu/u_logic/Siqvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                8 |              9 |
+|  clockGen/clk_out1 | UART/uart2/sample                         | resetGen/SR[0]                    |                2 |              9 |
+|  clockGen/clk_out1 | cpu/u_logic/Rdyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                8 |              9 |
+|  clockGen/clk_out1 | cpu/u_logic/Rdyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                7 |              9 |
+|  clockGen/clk_out1 | ROM/uart1/sample                          | resetGen/resetHW                  |                2 |              9 |
+|  clockGen/clk_out1 | cpu/u_logic/Okn2z4_i_1_n_0                | cpu/u_logic/Ytm2z4_i_1_n_0        |                9 |             10 |
+|  clockGen/clk_out1 | cpu/u_logic/C5ovx4                        | cpu/u_logic/Ypi3z4_i_2_n_0        |                8 |             10 |
+|  clockGen/clk_out1 | cpu/u_logic/Feyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |                8 |             11 |
+|  clockGen/clk_out1 | cpu/u_logic/Teyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |                9 |             11 |
+|  clockGen/clk_out1 | UART/uart2/datareg_reg[0]_0               | resetGen/SR[0]                    |                6 |             12 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Ek03z4_i_3_n_0        |                9 |             12 |
+|  clockGen/clk_out1 | cpu/u_logic/Wcyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |                8 |             12 |
+|  clockGen/clk_out1 | ROM/loader/wNow                           | resetGen/resetHW                  |                4 |             13 |
+|  clockGen/clk_out1 | cpu/u_logic/I4zvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               10 |             13 |
+|  clockGen/clk_out1 | cpu/u_logic/Rdyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |                9 |             13 |
+|  clockGen/clk_out1 | cpu/u_logic/Kdyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |               10 |             14 |
+|  clockGen/clk_out1 | cpu/u_logic/Ydyvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |               11 |             14 |
+|  clockGen/clk_out1 | cpu/u_logic/Ofyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |                9 |             14 |
+|  clockGen/clk_out1 | cpu/u_logic/Afyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |               11 |             14 |
+|  clockGen/clk_out1 | cpu/u_logic/Ddyvx4                        | cpu/u_logic/Y1n2z4_i_1_n_0        |                9 |             14 |
+|  clockGen/clk_out1 | cpu/u_logic/Kdyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |               12 |             15 |
+|  clockGen/clk_out1 | cpu/u_logic/Ydyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |               12 |             15 |
+|  clockGen/clk_out1 | cpu/u_logic/Teyvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |               11 |             15 |
+|  clockGen/clk_out1 | cpu/u_logic/Hfyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               10 |             15 |
+|  clockGen/clk_out1 | cpu/u_logic/Siqvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               10 |             15 |
+|  clockGen/clk_out1 | cpu/u_logic/Vfyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               10 |             16 |
+|  clockGen/clk_out1 | cpu/u_logic/Xppvx4                        | cpu/u_logic/P9h3z4_i_2_n_0        |               11 |             16 |
+|  clockGen/clk_out1 | cpu/u_logic/Xppvx4                        | cpu/u_logic/Ytm2z4_i_1_n_0        |               13 |             16 |
+|  clockGen/clk_out1 | cpu/u_logic/Ddyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               10 |             16 |
+|  clockGen/clk_out1 | cpu/u_logic/Afyvx4                        | cpu/u_logic/Glj2z4_i_1_n_0        |               12 |             16 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Glj2z4_i_1_n_0        |               16 |             19 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Ytm2z4_i_1_n_0        |               12 |             19 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Ek03z4_i_3_n_0        |               16 |             20 |
+|  clockGen/clk_out1 | cpu/u_logic/Meyvx4                        | cpu/u_logic/Cps2z4_i_3_n_0        |               16 |             25 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Y1n2z4_i_1_n_0        |               33 |             44 |
+|  clockGen/clk_out1 |                                           | resetGen/resetHW                  |               15 |             48 |
+|  clockGen/clk_out1 | DUMMY/E[0]                                | resetGen/SR[0]                    |               16 |             56 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Cps2z4_i_3_n_0        |               37 |             68 |
+|  clockGen/clk_out1 |                                           | resetGen/SR[0]                    |               23 |             72 |
+|  clockGen/clk_out1 |                                           | cpu/u_logic/Ypi3z4_i_2_n_0        |               55 |             73 |
++--------------------+-------------------------------------------+-----------------------------------+------------------+----------------+
+
+

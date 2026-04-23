@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lab/Documents/EmbeddedSystems/FG_DB_PB_SoC/DES_SoC/Hardware/Design/AHBdisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBdisp
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lab/Documents/EmbeddedSystems/FG_DB_PB_SoC/DES_SoC/Hardware/Testbench/TB_AHBdisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_AHBdisp
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/lab/Documents/EmbeddedSystems/FG_DB_PB_SoC/DES_SoC/Hardware/DemoSystem.sim/sim_disp/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
