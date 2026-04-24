@@ -2,10 +2,15 @@
 	Definitions and structs for System on Chip design assignment.
 	This version works without CMSIS.  */
 
-	
+
 #ifndef DES_M0_HDR_ALREADY_INCLUDED
 #define DES_M0_HDR_ALREADY_INCLUDED
 
+// Definitions for the SPI hardware for software to read
+#define SPI_BASE   0x52000000
+#define SPI_DATA   (*((volatile uint8  *)(SPI_BASE + 0x00)))
+#define SPI_CS     (*((volatile uint8  *)(SPI_BASE + 0x04)))
+#define SPI_STATUS (*((volatile uint8  *)(SPI_BASE + 0x08)))
 //  Type definitions for integers
 typedef unsigned       char uint8;
 typedef   signed       char  int8;
@@ -19,7 +24,7 @@ typedef   signed       int   int32;
 
 // =================================================================
 // Struct for registers in UART hardware
-typedef struct 
+typedef struct
 {
 	union  // this union occupies 4 bytes in the address map
 	{
@@ -31,12 +36,12 @@ typedef struct
 		volatile uint8   TxData;
 		volatile uint32  reserved1;
 	};
-	union 
+	union
 	{
 		volatile uint8   Status;
 		volatile uint32  reserved2;
 	};
-	union 
+	union
 	{
 		volatile uint8   Control;
 		volatile uint32  reserved3;
@@ -71,19 +76,19 @@ typedef struct 		// matches the registers in GPIO hardware
 		struct TwoByte OUT0;			// can also access as two 8-bit registers
 		volatile uint32  reserved0;		// overlapping 4-byte value
 	};
-	union 
+	union
 	{
 		volatile uint16  Out1;
 		struct TwoByte OUT1;
 		volatile uint32  reserved1;
 	};
-	union 
+	union
 	{
 		volatile uint16  In0;
 		struct TwoByte IN0;
 		volatile uint32  reserved2;
 	};
-	union 
+	union
 	{
 		volatile uint16  In1;
 		struct TwoByte IN1;
