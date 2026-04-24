@@ -16,6 +16,7 @@
 #include <stdio.h>				// needed for printf
 #include "DES_M0_SoC.h"			// defines registers in the hardware blocks used
 #include "accel.h"			// defines registers in the hardware blocks used
+#include "display.h"
 
 #define BUF_SIZE						100				// size of the array to hold received characters
 #define ASCII_CR						'\r'			// character to mark the end of input
@@ -76,31 +77,6 @@ void delay (uint32 n)
 		for(i=0; i<n; i++);		// do nothing n times
 }
 
-// Displays a signed number in mg on the 7-segment display
-// e.g. -512 shows as "- 5 1 2" on rightmost 4 digits
-void display_mg(int16 val) {
-    // Set all 8 digits to hex mode, enable only digits 0-3
-    DISP_MODE   = 0xFF;   // hex mode on all digits
-    DISP_ENABLE = 0x0F;   // enable rightmost 4 digits only
-
-    uint8 negative = 0;
-    if (val < 0) {
-        negative = 1;
-        val = -val;       // work with positive value
-    }
-
-    // Write digits right to left (digit 0 = rightmost)
-    DISP_DIG(0) = val % 10;
-	val /= 10;
-    DISP_DIG(1) = val % 10;
-	val /= 10;
-    DISP_DIG(2) = val % 10;
-	val /= 10;
-    // digit 3: minus sign if negative, blank otherwise
-    DISP_DIG(3) = negative ? 0x11 : 0x1F;    // 0x11 = dash, 0x1F = blank
-}
-
-
 
 //////////////////////////////////////////////////////////////////
 // Main Function
@@ -124,6 +100,7 @@ int main(void)
 
 
 // ========================  Working Loop ==========================================
+	accel_setup();
 
 	while(1)		// loop forever
 	{

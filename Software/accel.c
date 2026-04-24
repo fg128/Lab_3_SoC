@@ -1,6 +1,6 @@
 #include <stdio.h>			// needed for printf
 #include "DES_M0_SoC.h"		// defines registers in the hardware blocks used
-#include "spi.c"			// defines registers in the hardware blocks used
+#include "spi.h"			// defines registers in the hardware blocks used
 #include "accel.h"			// defines registers in the hardware blocks used
 
 uint8 accel_read_reg(uint8 reg_addr)
@@ -17,6 +17,8 @@ uint8 accel_read_reg(uint8 reg_addr)
     SPIbyte(reg_addr);        // register to read
     uint8 data = SPIbyte(NULL_BYTE);  // send null and recieve data
     SPIselect(1);
+
+    return data;
 }
 
 uint8 accel_write_reg(uint8 reg_addr, uint8 value)

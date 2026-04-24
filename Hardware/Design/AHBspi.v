@@ -141,7 +141,7 @@ module AHBspi(
                     state   <= IDLE;
                 end
 
-                default: state <= IDLE
+                default: state <= IDLE;
             endcase
         end
     end

@@ -68,7 +68,7 @@
 
 /* --------------------------- FUNCTION PROTOTYPES -------------------------- */
 uint8 accel_read_reg(uint8 reg_addr);
-uint8 accel_write_reg(uint8 reg_addr, uint8 value);
+void accel_write_reg(uint8 reg_addr, uint8 value);
 void accel_setup();
 int16 accel_read_y();
 
