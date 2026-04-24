@@ -67,8 +67,8 @@ module AHBspi(
     /* -------------------------- Chip select register -------------------------- */
 	reg CS;	// Stores software chip select in address 4
 	always @(posedge HCLK)
-		if (!HRESETn) CS <= 1'b0;
-		else if (rWrite && (rHADDR == 2'h1)) CS <= HWDATA[0];
+		if (!HRESETn) CS <= 1'b1;
+		else if (rWrite && (rHADDR == 2'h1)) CS <= HWDATA[0]; // Write software to chip select
     assign aclSSn = CS;
 
     /* ------------------------- State machine operation ------------------------ */
@@ -87,7 +87,7 @@ module AHBspi(
     reg[7:0] shift_rx;          // register to recive shift
 
     // Stores start data in address 0
-    wire DATA = rWrite & (rHADDR == 2'h0); // To allow software to write to start
+    wire DATA = rWrite & (rHADDR == 2'h0); // Write software to start
     wire start = DATA;          // write to DATA addr triggers transfer
 
     always @(posedge HCLK) begin
@@ -106,7 +106,6 @@ module AHBspi(
                     sck_reg <= 0;
                     if (start) begin
                         busy          <= 1'b1;        // Raise busy flag
-                        sck_reg       <= 1'b0;        // Reset registers
                         clk_counter   <= 4'd0;
                         shift_counter <= 4'd0;
                         shift_tx      <= HWDATA[7:0]; // Shift data into tx
@@ -121,11 +120,12 @@ module AHBspi(
                         sck_reg       <= ~sck_reg;
                         shift_counter <= shift_counter + 1;
 
+                        // SPI mode 0 logic
                         if (!sck_reg) begin
-                            // Rising SCLK so sample data
+                            // Rising SCLK so shift in data left
                             shift_rx <= {shift_rx[6:0], aclMISO};
                         end else begin
-                            // Falling SCLK so shift out data
+                            // Falling SCLK so shift out data left
                             shift_tx <= {shift_tx[6:0], 1'b0};
                         end
 
@@ -149,7 +149,7 @@ module AHBspi(
     assign aclMOSI = shift_tx[7];
     assign aclSCK  = sck_reg;
 
-    /* --------------------------- Software Read Data --------------------------- */
+    /* ----------------------- Read Software Multiplexing ----------------------- */
     reg[7:0] readData;
     always @(*) begin
         case (rHADDR)
