@@ -107,6 +107,13 @@ always @ (HADDR)
                     MUX_SEL = 4'd4;     // send slave number 4 to multiplexers
                 end
 
+            // Display at 0x5300_0000 to 0x53FF_FFFF
+            8'h53: 				// Address range 0x5300_0000 to 0x53FF_FFFF  16MB
+                begin
+                    HSEL_S5 = 1'b1;     // activate slave select 5 output
+                    MUX_SEL = 4'd5;     // send slave number 5 to multiplexers
+                end
+
             default: 			// Address not mapped to any slave
                 begin
                     HSEL_NOMAP = 1'b1;   // activate the NOMAP output

@@ -11,6 +11,13 @@
 #define SPI_DATA   (*((volatile uint8  *)(SPI_BASE + 0x00)))
 #define SPI_CS     (*((volatile uint8  *)(SPI_BASE + 0x04)))
 #define SPI_STATUS (*((volatile uint8  *)(SPI_BASE + 0x08)))
+
+#define DISP_BASE  0x53000000
+// Each digit is one byte: digit 0 = rightmost, digit 7 = leftmost
+#define DISP_DIG(n)  (*((volatile uint8 *)(DISP_BASE + (n))))
+#define DISP_MODE    (*((volatile uint8 *)(DISP_BASE + 8)))  // 1=hex mode per digit
+#define DISP_ENABLE  (*((volatile uint8 *)(DISP_BASE + 9)))  // 1=on per digit
+
 //  Type definitions for integers
 typedef unsigned       char uint8;
 typedef   signed       char  int8;
