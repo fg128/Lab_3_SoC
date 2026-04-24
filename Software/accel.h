@@ -1,5 +1,6 @@
 #include "DES_M0_SoC.h"			// defines registers in the hardware blocks used
 
+
 /* ------------------------- ACCELEROMETER COMMANDS ------------------------- */
 #define WRITE_COMMAND 0x0A
 #define READ_COMMAND 0x0B

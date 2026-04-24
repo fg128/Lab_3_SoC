@@ -6,6 +6,14 @@
 #ifndef DES_M0_HDR_ALREADY_INCLUDED
 #define DES_M0_HDR_ALREADY_INCLUDED
 
+//  Type definitions for integers
+typedef unsigned       char uint8;
+typedef   signed       char  int8;
+typedef unsigned short int  uint16;
+typedef   signed short int   int16;
+typedef unsigned       int  uint32;
+typedef   signed       int   int32;
+
 // Definitions for the SPI hardware for software to read
 #define SPI_BASE   0x52000000
 #define SPI_DATA   (*((volatile uint8  *)(SPI_BASE + 0x00)))
@@ -17,14 +25,6 @@
 #define DISP_DIG(n)  (*((volatile uint8 *)(DISP_BASE + (n))))
 #define DISP_MODE    (*((volatile uint8 *)(DISP_BASE + 8)))  // 1=hex mode per digit
 #define DISP_ENABLE  (*((volatile uint8 *)(DISP_BASE + 9)))  // 1=on per digit
-
-//  Type definitions for integers
-typedef unsigned       char uint8;
-typedef   signed       char  int8;
-typedef unsigned short int  uint16;
-typedef   signed short int   int16;
-typedef unsigned       int  uint32;
-typedef   signed       int   int32;
 
 #pragma anon_unions
 

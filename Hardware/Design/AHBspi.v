@@ -59,7 +59,7 @@ module AHBspi(
 			end
 		else if(HREADY)
             begin
-                rHADDR <= HADDR[3:2];         // capture address bits for for use in data phase
+                rHADDR <= HADDR[3:2];                   // capture address bits for for use in data phase
                 rWrite <= HSEL &  HWRITE & HTRANS[1];	// slave selected for write transfer
                 rRead  <= HSEL & ~HWRITE & HTRANS[1];	// slave selected for read transfer
             end
@@ -68,15 +68,16 @@ module AHBspi(
 	reg CS;	// Stores software chip select in address 4
 	always @(posedge HCLK)
 		if (!HRESETn) CS <= 1'b1;
-		else if (rWrite && (rHADDR == 2'h1)) CS <= HWDATA[0]; // Write software to chip select
+		else if (rWrite && (rHADDR == 2'h1)) CS <= HWDATA[0]; // For software to write to chip select
     assign aclSSn = CS;
 
     /* ------------------------- State machine operation ------------------------ */
-    localparam CLK_DIV      = 4'd8;
-    localparam MAX_SHIFTS   = 4'd15;
-    localparam IDLE         = 2'd0;
-    localparam SHIFT        = 2'd1;
-    localparam DONE         = 2'd2;
+    // `... the recommended SPI clock speeds are 1 MHz to 8 MHz` - pg.19 accel datashhet
+    localparam CLK_DIV      = 4'd8;     // To divide 50MHz clock by 8 to work with accelerometer <8MHz speed
+    localparam MAX_SHIFTS   = 4'd15;    // To count to 16 bit shifts
+    localparam IDLE         = 2'd0;     // IDLE mode constant
+    localparam SHIFT        = 2'd1;     // SHIFT mode constant
+    localparam DONE         = 2'd2;     // DONE mode constant
 
     reg busy;                   // Register to trakc if currently busy
     reg sck_reg;                // Register to trakc sck
@@ -87,7 +88,7 @@ module AHBspi(
     reg[7:0] shift_rx;          // register to recive shift
 
     // Stores start data in address 0
-    wire DATA = rWrite & (rHADDR == 2'h0); // Write software to start
+    wire DATA = rWrite & (rHADDR == 2'h0); // For software to write to start
     wire start = DATA;          // write to DATA addr triggers transfer
 
     always @(posedge HCLK) begin
@@ -106,19 +107,19 @@ module AHBspi(
                     sck_reg <= 0;
                     if (start) begin
                         busy          <= 1'b1;        // Raise busy flag
-                        clk_counter   <= 4'd0;
-                        shift_counter <= 4'd0;
+                        clk_counter   <= 4'd0;        // Reset clock count
+                        shift_counter <= 4'd0;        // Reset bits shifted count
                         shift_tx      <= HWDATA[7:0]; // Shift data into tx
                         state         <= SHIFT;       // Change state to shifting
                     end
                 end
 
                 SHIFT: begin
-                    clk_counter <= clk_counter + 1;
+                    clk_counter <= clk_counter + 1;   // Increment cpu clock
                     if (clk_counter == CLK_DIV - 1) begin
-                        clk_counter   <= 0;
-                        sck_reg       <= ~sck_reg;
-                        shift_counter <= shift_counter + 1;
+                        clk_counter   <= 0;                 // Reset cpu clock counter
+                        sck_reg       <= ~sck_reg;          // Toggle spi clock to generate cpu clock / 8
+                        shift_counter <= shift_counter + 1; // Count bit shift
 
                         // SPI mode 0 logic
                         if (!sck_reg) begin
@@ -130,15 +131,15 @@ module AHBspi(
                         end
 
                         if (shift_counter == MAX_SHIFTS) begin
-                            state <= DONE;
+                            state <= DONE; // All bit shifts done, go to DONE state
                         end
                     end
                 end
 
                 DONE: begin
-                    busy    <= 1'b0;
-                    sck_reg <= 1'b0;
-                    state   <= IDLE;
+                    busy    <= 1'b0;    // Clear busy bit
+                    sck_reg <= 1'b0;    // Pull sclk low for mode 0 in done transaction
+                    state   <= IDLE;    // Busy bit cleared, go to IDLE state
                 end
 
                 default: state <= IDLE;
@@ -146,10 +147,10 @@ module AHBspi(
         end
     end
 
-    assign aclMOSI = shift_tx[7];
-    assign aclSCK  = sck_reg;
+    assign aclMOSI = shift_tx[7];   // Have module output track shift_tx MSB whilst shifting
+    assign aclSCK  = sck_reg;       // Have module output track sck_reg to output SPI clock
 
-    /* ----------------------- Read Software Multiplexing ----------------------- */
+    /* -------------------- Multiplexing For Software Reading ------------------- */
     reg[7:0] readData;
     always @(*) begin
         case (rHADDR)

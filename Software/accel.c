@@ -3,6 +3,7 @@
 #include "spi.h"			// defines registers in the hardware blocks used
 #include "accel.h"			// defines registers in the hardware blocks used
 
+
 uint8 accel_read_reg(uint8 reg_addr)
 {
     /* ------------------------  FROM DATA SHEET pg.19 ------------------------- */
@@ -12,16 +13,16 @@ uint8 accel_read_reg(uint8 reg_addr)
     // byte> <data byte> <additional data bytes for multi-byte> …
     // </CS up>
     /* ------------------------------------------------------------------------ */
-    SPIselect(0);             // select the accelerometer
-    SPIbyte(READ_COMMAND);    // send the read command
-    SPIbyte(reg_addr);        // register to read
-    uint8 data = SPIbyte(NULL_BYTE);  // send null and recieve data
+    SPIselect(0);                     // select the accelerometer
+    SPIbyte(READ_COMMAND);            // send the read command
+    SPIbyte(reg_addr);                // register to read
+    uint8 data = SPIbyte(NULL_BYTE);  // send null just to recieve data
     SPIselect(1);
 
     return data;
 }
 
-uint8 accel_write_reg(uint8 reg_addr, uint8 value)
+void accel_write_reg(uint8 reg_addr, uint8 value)
 {
     /* ------------------------  FROM DATA SHEET pg.19 ------------------------- */
     // The command structure for the read register and write register
@@ -34,7 +35,7 @@ uint8 accel_write_reg(uint8 reg_addr, uint8 value)
     SPIbyte(WRITE_COMMAND);   // send the read command
     SPIbyte(reg_addr);        // register to read
     SPIbyte(value);           // register to write
-    SPIselect(1);
+    SPIselect(1);             // deselct accelerometer
 }
 
 void accel_setup()
@@ -48,11 +49,18 @@ void accel_setup()
 
 int16 accel_read_y()
 {
+    /* ------------------------  FROM DATA SHEET pg.19 ------------------------- */
+    // The command structure for the read register and write register
+    // commands is as follows (see Figure 36 and Figure 37):
+    // </CS down> <command byte (0x0A or 0x0B)> <address
+    // byte> <data byte> <additional data bytes for multi-byte> …
+    // </CS up>
+    /* ------------------------------------------------------------------------ */
     SPIselect(0);
     SPIbyte(READ_COMMAND);
-    SPIbyte(YDATA_L); // Burst read both high and low fomr one command
-    uint8 ylo = SPIbyte(0x00);
-    uint8 yhi = SPIbyte(0x00);
+    SPIbyte(YDATA_L);               // Burst read both high and low fomr one command
+    uint8 ylo = SPIbyte(NULL_BYTE); // send null just to recieve data low byte
+    uint8 yhi = SPIbyte(NULL_BYTE); // send null just to recieve data high byte
     SPIselect(1);
 
     int16 raw = (int16)((yhi << 8) | ylo);
