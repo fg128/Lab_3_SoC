@@ -77,6 +77,7 @@ void delay (uint32 n)
 }
 
 
+
 //////////////////////////////////////////////////////////////////
 // Main Function
 //////////////////////////////////////////////////////////////////
@@ -151,7 +152,9 @@ int main(void)
 		printf("\n switchs: %d\n", *(uint16 *)GPIO_SW);
 
 		int16 y = accel_read_y();
-		printf(y);
+		printf("\n accel Y: %d\n", (int)y);
+		display_accel(y);
+		delay(FLASH_DELAY);
 	} // end of infinite loop
 
 }  // end of main
