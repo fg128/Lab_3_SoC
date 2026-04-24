@@ -58,12 +58,12 @@ module AHBliteTop (
 // ====================== Signals to and from individual slaves ==================
 // Slave select signals (one per slave)
 // ## As you add more slaves, you will need more of these signals
-    wire        HSEL_rom, HSEL_ram, HSEL_dummy, HSEL_gpio, HSEL_uart;
+    wire        HSEL_rom, HSEL_ram, HSEL_dummy, HSEL_gpio, HSEL_uart, HSEL_spi;
 
 // Slave output signals (one per slave)
 // ## As you add more slaves, you will need more of these signals
-    wire [31:0] HRDATA_rom, HRDATA_ram, HRDATA_gpio, HRDATA_uart; // read data from each slave
-    wire        HREADYOUT_rom, HREADYOUT_ram, HREADYOUT_dummy, HREADYOUT_gpio, HREADYOUT_uart;   // ready output from each slave
+    wire [31:0] HRDATA_rom, HRDATA_ram, HRDATA_gpio, HRDATA_uart, HRDATA_spi; // read data from each slave
+    wire        HREADYOUT_rom, HREADYOUT_ram, HREADYOUT_dummy, HREADYOUT_gpio, HREADYOUT_uart, HREADYOUT_spi;   // ready output from each slave
     wire        HRESP_dummy;  // some slaves uses HRESP to signal an error response
 
 
@@ -89,12 +89,6 @@ module AHBliteTop (
  //Creating blank wires
     wire[15:0] GPIO_out;
     assign GPIO_out = 16'b0;
-
-// Temporary connections to the accelerometer signals, to avoid warnings in synthesis
-// ## If you use the accelerometer, you will need to delete these assignments
-    assign aclSCK = 1'b0;   // accelerometer SPI clock is always low
-    assign aclMOSI = 1'b0;  // acceleromoter SPI MOSI is always 0
-    assign aclSSn = 1'b1;   // accelerometer SPI slave select is inactive
 
 // ======================== Signals for display on oscilloscope ===================
 // ## Change these as needed to output any 8 signals in this module
@@ -181,7 +175,7 @@ module AHBliteTop (
         .HSEL_S1    (HSEL_ram),
         .HSEL_S2    (HSEL_gpio),
         .HSEL_S3    (HSEL_uart),
-        .HSEL_S4    (),
+        .HSEL_S4    (HSEL_spi),
         .HSEL_S5    (),
         .HSEL_S6    (),
         .HSEL_S7    (),
@@ -205,7 +199,7 @@ module AHBliteTop (
         .HRDATA_S1      (HRDATA_ram),
         .HRDATA_S2      (HRDATA_gpio),
         .HRDATA_S3      (HRDATA_uart),
-        .HRDATA_S4      (BAD_DATA),
+        .HRDATA_S4      (HRDATA_spi),
         .HRDATA_S5      (BAD_DATA),
         .HRDATA_S6      (BAD_DATA),         // unused inputs give BAD_DATA
         .HRDATA_S7      (BAD_DATA),
@@ -219,7 +213,7 @@ module AHBliteTop (
         .HREADYOUT_S1   (HREADYOUT_ram),
         .HREADYOUT_S2   (HREADYOUT_gpio),
         .HREADYOUT_S3   (HREADYOUT_uart),
-        .HREADYOUT_S4   (1'b1),
+        .HREADYOUT_S4   (HREADYOUT_spi),
         .HREADYOUT_S5   (1'b1),
         .HREADYOUT_S6   (1'b1),             // unused inputs must be tied to 1
         .HREADYOUT_S7   (1'b1),
@@ -326,18 +320,40 @@ module AHBliteTop (
          .uart_IRQ    (uart_IRQ)             // interrupt request
          );
 
-// ======================= Dummy Slave ======================================
-// Dummy slave only needs the type of transaction to decide how to respond.
-// The response is OKAY for IDLE and BUSY transactions, otherwise ERROR.
+// ======================= SPI block ======================================
+     AHBspi SPI(
+         .HCLK        (HCLK),                // bus clock
+         .HRESETn     (HRESETn),             // bus reset, active low
+         .HSEL        (HSEL_uart),           // selects this slave
+         .HREADY      (HREADY),              // indicates previous transaction completing
+         .HADDR       (HADDR),               // address
+         .HTRANS      (HTRANS),              // transaction type (only bit 1 used)
+         .HWRITE      (HWRITE),              // write transaction
+         .HSIZE       (HSIZE),               // transaction width (max 32-bit supported)
+         .HWDATA      (HWDATA),              // write data
+         .HRDATA      (HRDATA_uart),         // read data output
+         .HREADYOUT   (HREADYOUT_uart),      // ready output
+		 .HRESP       (HRESP),			     // response output from slave
+			// SPI signals
+	     .aclMISO	   (aclMISO)		     // accelerometer SPI MISO signal
+	     .aclMOSI      (aclMOSI)             // accelerometer SPI MOSI signal
+         .aclSCK       (aclSCK)             // accelerometer SPI clock signal
+         .aclSSn       (aclSSn)             // accelerometer slave select signal, active low
+         );
 
-    AHBdummy DUMMY(
-       .HCLK        (HCLK),            // bus clock
-       .HRESETn     (HRESETn),         // bus reset, active low
-       .HSEL        (HSEL_dummy),      // selects this slave
-       .HREADY      (HREADY),          // indicates previous transaction completing
-       .HTRANS      (HTRANS),          // transaction type (only bit 1 used)
-       .HREADYOUT   (HREADYOUT_dummy), // ready output
-       .HRESP       (HRESP_dummy)      // response output
-       );
+
+// // ======================= Dummy Slave ======================================
+// // Dummy slave only needs the type of transaction to decide how to respond.
+// // The response is OKAY for IDLE and BUSY transactions, otherwise ERROR.
+
+//     AHBdummy DUMMY(
+//        .HCLK        (HCLK),            // bus clock
+//        .HRESETn     (HRESETn),         // bus reset, active low
+//        .HSEL        (HSEL_dummy),      // selects this slave
+//        .HREADY      (HREADY),          // indicates previous transaction completing
+//        .HTRANS      (HTRANS),          // transaction type (only bit 1 used)
+//        .HREADYOUT   (HREADYOUT_dummy), // ready output
+//        .HRESP       (HRESP_dummy)      // response output
+//        );
 
 endmodule
