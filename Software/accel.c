@@ -63,6 +63,6 @@ int16 accel_read_y()
     uint8 yhi = SPIbyte(NULL_BYTE); // send null just to recieve data high byte
     SPIselect(1);
 
-    int16 raw = (int16)((yhi << 8) | ylo);
-    return raw >> 4;        // 12-bit signed value (right-justify)
+    int16 raw = (int16)((yhi << 8) | ylo); // Load raw bytes
+    return raw;
 }
