@@ -1,3 +1,7 @@
+#ifndef ACCEL_H
+#define ACCEL_H
+
+
 #include "DES_M0_SoC.h"			// defines registers in the hardware blocks used
 
 
@@ -70,7 +74,8 @@
 /* --------------------------- FUNCTION PROTOTYPES -------------------------- */
 uint8 accel_read_reg(uint8 reg_addr);
 void accel_write_reg(uint8 reg_addr, uint8 value);
-void accel_setup();
-int16 accel_read_y();
+void accel_setup(void);
+int16 accel_read(uint8 axis_reg);
 
 
+#endif

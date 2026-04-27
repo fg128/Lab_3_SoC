@@ -1,6 +1,6 @@
-#include <stdio.h>					// needed for printf
-#include "DES_M0_SoC.h"			// defines registers in the hardware blocks used
-#include "spi.h"			// defines registers in the hardware blocks used
+#include <stdio.h>
+#include "DES_M0_SoC.h"
+#include "spi.h"
 
 
 void SPIselect(int select)
