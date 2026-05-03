@@ -152,7 +152,7 @@ module AHBspi(
 
     /* -------------------- Multiplexing For Software Reading ------------------- */
     reg[7:0] readData;
-    always @(*) begin
+	always @(shift_rx, CS, busy, rHADDR) begin
         case (rHADDR)
             2'h0: readData <= shift_rx;     // Received byte
             2'h1: readData <= {7'b0, CS};   // Chip select
