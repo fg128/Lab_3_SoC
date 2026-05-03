@@ -37,5 +37,4 @@ void display_mg(int16 val, int is_left_value, int dual_mode) {
 
     // digit 3: minus sign if negative, blank otherwise
     DISP_DIG(3+offset) = negative ? 0x11 : 0x1F;    // 0x11 = dash, 0x1F = blank
-
 }
